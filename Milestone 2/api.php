@@ -45,35 +45,8 @@ $database = [
         ]
     ];
 
+    header('Content-Type: application/json');
+
+    echo json_encode($database);
+
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milestone 1</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="https://www.freepnglogos.com/uploads/spotify-logo-png/image-gallery-spotify-logo-21.png" alt="">
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <?php
-                foreach ($database as $key => $value) {
-                    echo "<div class='box'> ";
-                    echo "<img src=".$value[poster].">";
-                        echo  "<div>"."<p>".$value[title]."</p>"."<p>".$value[author]."</p>"."<p>".$value[year]."</p>"."</div>";
-                    echo "</div>";
-
-                }
-            ?>
-        </div>
-    </main>
-</body>
-</html>
