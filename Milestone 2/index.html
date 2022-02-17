@@ -17,6 +17,15 @@
             </div>
         </header>
         <main>
+            <div class="selectGenere">
+                <select class="selection">
+                    <option value="All">All</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Metal">Metal</option>
+                    <option value="Rock">Rock</option>
+                </select>
+            </div>
             <div class="container">
                 <div v-for="elemento in myArr" class="box">
                     <img :src="elemento.poster" alt="">
